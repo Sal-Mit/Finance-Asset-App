@@ -1,9 +1,6 @@
 # Getting Started 
 
 This is a basic project, built for assessment purpose. It includes functionalities as sort, search, and multifilter.
-
-# Getting Started 
-
 This project was bootstrapped with [Create React App], [Tailwind CSS].
 
 ## Available Scripts
