@@ -35,6 +35,12 @@ const App = () => {
           } 
         />
         <Route 
+          path="/dashboard/holdings" 
+          element={
+            <ProtectedRoute element={<Dashboard />} /> // Protect the Dashboard route
+          } 
+        />
+        <Route 
           path="/nav" 
           element={
             <ProtectedRoute element={<UserNavbar />} /> // Protect the Dashboard route

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { holdingAssetData as data} from '../assets/holding_asset_data';
 import '../index.css';
 import { useFilter } from '../hooks/useFilter';
+import { Search } from 'lucide-react';
 
 const sectors = ['Technology', 'Finance', 'Healthcare', 'Consumer Services', 'Miscellaneous'];
 
-export default function Holdings() {
+
+const Holdings = () => {
     const {
         search, setSearch, selectedSectors, handleSectorChange, setShowFilters, showFilters,
         filter, setFilter, minPL, setMinPL, maxPL, setMaxPL, filteredData
@@ -29,10 +31,7 @@ export default function Holdings() {
                                 type="submit"
                                 className="absolute left-2 top-2 bottom-2 text-gray-500 hover:text-gray-700"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M8 4a6 6 0 100 12 6 6 0 000-12zM3.293 3.293a8 8 0 1111.414 11.414 8 8 0 01-11.414-11.414z" clipRule="evenodd" />
-                                    <path d="M13.293 13.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z" />
-                                </svg>
+                                <Search />
                             </button>
                         </form>
                         <button
@@ -47,7 +46,7 @@ export default function Holdings() {
                     {showFilters && (
                         <div className="mb-4 border p-4 rounded-lg shadow">
                            <div className="mb-4">
-                                <h4 className="font-semibold">P&L Filter:</h4>
+                                <h4 className="font-semibold p-1">P&L Filter:</h4>
                                 <label className="inline-flex items-center mr-4">
                                     <input
                                         type="radio"
@@ -82,7 +81,7 @@ export default function Holdings() {
 
                             <div className="mb-4">
                                 <h4 className="font-semibold">Overall P&L % Range:</h4>
-                                <div className="flex space-x-2">
+                                <div className="flex space-x-2 p-1">
                                     <input
                                         type="number"
                                         value={minPL}
@@ -102,7 +101,7 @@ export default function Holdings() {
 
                             <div className="mb-4">
                                 <h4 className="font-semibold">Sector:</h4>
-                                <div className="max-h-32 overflow-y-auto">
+                                <div className="max-h-32 overflow-y-auto p-1">
                                     {sectors.map((sector) => (
                                         <label key={sector} className="inline-flex items-center mr-4">
                                             <input
@@ -120,11 +119,10 @@ export default function Holdings() {
                     )}
 
                     {/* Your Assets Table */}
-                    <div className="overflow-auto flex-grow h-3/4">
-                    <h3 className="bold text-md py-4">Your Assets</h3>
-                    <div className="overflow-auto h-3/4">
+                    <div>
+                        <h3 className="py-4">Your Assets</h3>                   
                         <table className="min-w-full text-left table-auto border-collapse border border-gray-300">
-                            <thead className="bg-gray-200 sticky top-0">
+                            <thead className="bg-gray-200">
                                 <tr>
                                     <th className="px-4 py-2 border border-gray-300">Symbol</th>
                                     <th className="px-4 py-2 border border-gray-300">LTP</th>
@@ -152,7 +150,8 @@ export default function Holdings() {
                     </div>
                 </div>
                 </div>
-                </div>
             </div> 
     );
 }
+
+export default Holdings;

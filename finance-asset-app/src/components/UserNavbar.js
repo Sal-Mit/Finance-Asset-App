@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { logoutUser } from '../utils/auth';
 
+
 const user = {
   name: 'Saloni Mittal',
   email: 'sm@example.com',
@@ -19,7 +20,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function UserNavbar() {
+const UserNavbar = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [navigation, setNavigation] = useState(initialNavigation);
@@ -46,7 +47,8 @@ export default function UserNavbar() {
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-4">
           <div className="relative flex items-center justify-between h-16">
             {/* Company logo and name */}
-            <div className="flex items-center">
+            <div 
+              className="flex items-center">
               <img
                 className="h-5 w-5"
                 src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
@@ -56,7 +58,7 @@ export default function UserNavbar() {
             </div>
 
             {/* Main navigation - Horizontal layout */}
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-8 ">
               {navigation.map((item) => (
                 <span key={item.name} className={item.disabled ? 'cursor-not-allowed text-gray-400' : ''}>
                   <a
@@ -118,3 +120,5 @@ export default function UserNavbar() {
     </div>
   );
 }
+
+export default UserNavbar;

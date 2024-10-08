@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSort } from '@fortawesome/free-solid-svg-icons';
+import { ArrowDownUp} from 'lucide-react';
 import { data as assetData } from '../assets/data'; 
+
 
 const SideBar = () => {
   const [data, setData] = useState([]);
@@ -46,15 +46,15 @@ const SideBar = () => {
   };
 
   return (
-    <div className="w-1/4 bg-white shadow-lg h-screen fixed">
-        <div className="flex flex-row justify-between items-center h-16 p-4 bg-slate-100 border-right shadow">
-          <h3 className="text-lg font-bold">Today's Market</h3>
+    <div className="w-1/5 bg-white shadow-lg h-screen fixed">
+        <div className="flex justify-between items-center h-16 p-4 bg-slate-100  shadow">
+          <h3>Today's Market</h3>
           <div className="relative">
             <div 
               onClick={() => setDropdownOpen((prev) => !prev)} 
               className="cursor-pointer"
             >
-              <FontAwesomeIcon icon={faSort} className="text-gray-600" />
+              <ArrowDownUp className="text-gray-600 size-4" />
             </div>
             {dropdownOpen && (
               <div className="absolute flex flex-col right-0 bg-white shadow-lg rounded-lg mt-2 w-40 transition-all duration-200 transform scale-95 opacity-100">
@@ -75,7 +75,7 @@ const SideBar = () => {
           </div>
         </div>
 
-        <div className="flex flex-col h-screen overflow-y-auto divide-slate-300 shadow p-2">
+        <div className="realtive flex flex-col h-screen overflow-y-auto divide-slate-300 shadow p-2">
           <ul role="list" className="divide-y divide-slate-200">
             {loading ? (
               <div>Loading...</div> 
@@ -87,11 +87,11 @@ const SideBar = () => {
                   className="m-2 flex justify-between items-center hover:bg-gray-200 p-2 rounded transition"
                 >
                   <div>
-                    <p className="text-sm font-bold">{asset.name}</p>
+                    <p className="text-sm ">{asset.name}</p>
                     <p className="text-sm text-gray-500">{asset.symbol}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-bold">{asset.ltp}</p>
+                    <p className="text-sm ">{asset.ltp}</p>
                     <p className={`text-sm ${asset.overallPercent < 0 ? 'text-red-500' : 'text-green-500'}`}>
                       {asset.overallPercent.toFixed(2)}%
                     </p>

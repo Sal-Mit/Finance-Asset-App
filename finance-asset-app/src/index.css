@@ -1,4 +1,3 @@
-/* styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,9 +22,7 @@ body {
     padding: 1rem;
 }
 
-h3, h4 {
-    margin-bottom: 0.5rem;
-}
+
 
 /* Utility Classes */
 .table-responsive {
@@ -51,5 +48,5 @@ h3, h4 {
 }
 
 .table th {
-    background-color: #edf2f7; /* Tailwind's gray-200 */
+    background-color: #edf2f7; 
 }

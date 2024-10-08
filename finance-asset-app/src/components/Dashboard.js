@@ -3,11 +3,12 @@ import UserNavbar from '../components/UserNavbar';
 import Holdings from '../components/Holdings';
 import Sidebar from '../components/SideBar';
 
-export default function Dashboard() {
+
+const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex">
       {/* Sidebar */}
-      <div className="w-1/4 bg-white shadow-lg">
+      <div className="w-1/5 bg-white shadow-lg">
         <Sidebar />
       </div>
 
@@ -26,3 +27,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+export default Dashboard;
