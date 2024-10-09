@@ -46,5 +46,9 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.13"
-  }
+  },
+  "description": "This is a basic project, built for assessment purpose. It includes functionalities as sort, search, and multifilter.\r This project was bootstrapped with [Create React App], [Tailwind CSS].",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC"
 }
