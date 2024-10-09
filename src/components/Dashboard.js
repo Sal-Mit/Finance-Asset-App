@@ -1,7 +1,7 @@
 import React from 'react';
-import UserNavbar from '../components/UserNavbar';
-import Holdings from '../components/Holdings';
-import Sidebar from '../components/SideBar';
+import UserNavbar from './UserNavbar';
+import Holdings from './Holdings';
+import Sidebar from './SideBar';
 
 const Dashboard = () => {
   return (
