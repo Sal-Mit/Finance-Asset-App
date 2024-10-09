@@ -50,3 +50,14 @@ body {
 .table th {
     background-color: #edf2f7; 
 }
+
+
+/* Global CSS for the table container */
+.holdings-container {
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling */
+  }
+  
+  /* Ensure table content doesn't overflow in small screens */
+/* styles.css */
+
