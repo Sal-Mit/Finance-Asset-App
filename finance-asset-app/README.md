@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App], [Tailwind CSS].
 
 In the project directory, you can run:
 
+Note: Before that make sure you are inside finance-asset-app directory (your path should look like '../Finance-Asset-App/finance-asset-app' )
+
 ### `npm start`
 
 Runs the app in the development mode.\
