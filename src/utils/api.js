@@ -1,6 +1,6 @@
 export const apiLogin = async (email, password) => {
     try {
-      const response = await fetch('/api/login', { // Replace with your actual API endpoint
+      const response = await fetch('/api/login', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ export const apiLogin = async (email, password) => {
       return await response.json(); // Assuming response is in JSON format
     } catch (error) {
       console.error('API Error:', error);
-      throw new Error('Login failed. Please try again.'); // Throw an error for handling in the login component
+      throw new Error('Login failed. Please try again.'); 
     }
   };
   
