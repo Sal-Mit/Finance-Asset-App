@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login'; // Your login component
 import Dashboard from './components/Dashboard'; // Your protected component
-import UserNavbar from './components/UserNavbar';
-import SideBar from './components/SideBar';
 import ProtectedRoute from './ProtectedRoute'; // Your protected route component
 import { isLoggedIn } from './utils/auth'; // Importing the authentication utility
 
@@ -23,12 +21,6 @@ const App = () => {
           element={<Login setIsAuthenticated={setIsAuthenticated} />} // Pass the setter to Login component
         />
         <Route 
-          path="/sidebar" 
-          element={
-            <ProtectedRoute element={<SideBar/>} /> // Protect the Dashboard route
-          } 
-        />
-        <Route 
           path="/dashboard" 
           element={
             <ProtectedRoute element={<Dashboard />} /> // Protect the Dashboard route
@@ -38,12 +30,6 @@ const App = () => {
           path="/dashboard/holdings" 
           element={
             <ProtectedRoute element={<Dashboard />} /> // Protect the Dashboard route
-          } 
-        />
-        <Route 
-          path="/nav" 
-          element={
-            <ProtectedRoute element={<UserNavbar />} /> // Protect the Dashboard route
           } 
         />
       </Routes>
