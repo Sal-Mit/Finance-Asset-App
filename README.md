@@ -7,8 +7,6 @@ This project was bootstrapped with [Create React App], [Tailwind CSS].
 
 In the project directory, you can run:
 
-Note: Before that make sure you are inside finance-asset-app directory (your path should look like **'../Finance-Asset-App/finance-asset-app'** )
-
 ### `npm install`
 
 To download all node modules in your local machine.
