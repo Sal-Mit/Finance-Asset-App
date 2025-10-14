@@ -1,6 +1,6 @@
 # Getting Started 
 
-This is a basic project, built for assessment purpose. It includes functionalities as sort, search, and multifilter.
+This is a basic stock market catalog project. It includes functionalities as sort, search, and multifilter. 
 This project was bootstrapped with [Create React App], [Tailwind CSS].
 
 ## Available Scripts
